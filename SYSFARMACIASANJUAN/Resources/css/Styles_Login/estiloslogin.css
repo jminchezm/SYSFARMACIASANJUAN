@@ -1,0 +1,146 @@
+/* Colores */
+/* #03588C */ /*banner*/
+/* #048ABF */ /*cursor*/
+/* #052A59 */ /*letras*/
+/* #034C8C */ /**/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #052A59;
+    padding: 20px;
+}
+
+/* Estilos generales del contenedor de login */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Imagen de usuario */
+.img-login {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los labels */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilos para los campos de texto */
+.input-text {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Botón de envío */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #03588C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-submit:hover {
+        background-color: #048ABF;
+    }
+
+/* Mensaje de error */
+#alertaLogin {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Estilos del contenido del modal */
+.modal-content-alerta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
+    width: 350px; /* Ancho aumentado */
+    text-align: center;
+    position: relative; /* Posición relativa para el botón de cierre */
+}
+
+/* Botón de cierre (la X) */
+.close-button-alerta {
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+    .close-button-alerta:hover,
+    .close-button-alerta:focus {
+        color: #333;
+        cursor: pointer;
+    }
+
+/* Botón personalizado para OK */
+#alert-ok-button {
+    background-color: #03588C;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease; /* Suavizar el cambio de color al pasar el cursor */
+}
+
+    #alert-ok-button:hover {
+        background-color: #048ABF;
+    }
+
+/* Estilo de la imagen del modal */
+#alert-image {
+    margin-bottom: 15px;
+    width: 80px;
+    height: 80px;
+}

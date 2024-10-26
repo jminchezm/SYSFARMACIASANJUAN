@@ -1,0 +1,561 @@
+﻿/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #03588C;
+}
+
+.mainModuloEmpleado {
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.h2-opcion {
+    color: white;
+}
+
+.divModuloEmpleado {
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.opcionesModuloEmpleado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #048ABF;
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.opcionFila1ModuloEmpleado, .opcionFila2ModuloEmpleado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /*margin-bottom: 0;*/
+}
+
+.articleOpcionModuloEmpleado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #034C8C;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+    .articleOpcionModuloEmpleado:hover {
+        background-color: #03588C;
+        border-radius: 20px;
+    }
+
+
+
+.botonRegistrarEmpleado, .botonModificarEmpleado, .botonListaEmpleados, .botonCrearUsuario, .botonModificarUsuario, .botonListaUsuarios {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+}
+
+/* Media Queries para pantallas medianas */
+@media (max-width: 768px) {
+    .opcionesModuloEmpleado {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .opcionFila1ModuloEmpleado, .opcionFila2ModuloEmpleado {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .articleOpcionModuloEmpleado {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 480px) {
+    .articleOpcionModuloEmpleado {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    img {
+        max-width: 150px;
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Esto oculta el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    /* Centrando el modal horizontal y verticalmente */
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 60%;
+    /* Asegurando que el modal esté centrado en la pantalla */
+    position: relative;
+}
+
+    .modal-content h2 {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1 1 calc(33.333% - 10px);
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+
+    .form-group label {
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        color: #333;
+        box-sizing: border-box;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #03588C;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #048ABF;
+    }
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Area Listar y Modificar Empleado */
+.modal-content-modificarEmpleado {
+    background-color: #fefefe;
+    margin: auto auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 98%;
+    height: 100%;
+    max-height: 90%;
+    /* Asegurando que el modal esté centrado en la pantalla */
+    position: relative;
+}
+
+.closeModificarEmpleado {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+    .closeModificarEmpleado:hover,
+    .closeModificarEmpleado:focus {
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.contenedorBuscarEmpleadoID {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+/* Area Modificar Empleado */
+
+/*.modalModificarEmpleadoM {
+    display: none;*/ /* Esto oculta el modal por defecto */
+/*position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;*/
+/* Centrando el modal horizontal y verticalmente */
+/*display: flex;
+}*/
+
+
+.modal-content-ModificarEmpleadoM {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 60%;
+    /* Asegurando que el modal esté centrado en la pantalla */
+    position: relative;
+}
+
+.close-ModificarEmpleadoM {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+    .close-ModificarEmpleadoM:hover,
+    .close-ModificarEmpleadoM:focus {
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* Contenedor de la tabla con scroll vertical */
+/*#contenedor-tabla {
+    max-height: 80%;*/ /* Ajusta según el tamaño deseado para el scroll */
+/*height:100%;
+    overflow-y: auto;*/ /* Activa el scroll vertical */
+/*border: 1px solid #ddd;*/ /* Opcional: para definir un borde alrededor del contenedor */
+/*}*/
+
+/* Estilos generales para la tabla */
+#contenedor-tabla {
+    max-height: 80%; /* Ajusta la altura según tus necesidades */
+    overflow-y: auto; /* Habilitar el scroll vertical */
+    margin-top: 20px;
+}
+
+    #contenedor-tabla table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+    }
+
+    #contenedor-tabla th, #contenedor-tabla td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    #contenedor-tabla th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    /* Estilo para las filas pares de la tabla */
+    #contenedor-tabla tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    /* Estilo para las filas al pasar el cursor */
+    #contenedor-tabla tr:hover {
+        background-color: #ddd;
+    }
+
+    /* Estilo para el botón dentro de la tabla */
+    #contenedor-tabla button.modificarBtn, button.modificarBtnUsuario, button.modificarPasswordBtnUsuario {
+        background-color: #f39c12;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        #contenedor-tabla button.modificarBtn:hover {
+            background-color: #e67e22;
+        }
+
+/* Estilos para la tabla responsiva */
+@media screen and (max-width: 768px) {
+    #contenedor-tabla table, #contenedor-tabla th, #contenedor-tabla td {
+        display: block;
+        width: 100%;
+    }
+
+    #contenedor-tabla th {
+        text-align: right;
+        padding-right: 20px;
+        background-color: #333;
+        color: white;
+    }
+
+    #contenedor-tabla td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+        #contenedor-tabla td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+}
+
+.modal-content-modificarUsuario {
+    background-color: #fefefe;
+    margin: auto auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 98%;
+    height: 100%;
+    max-height: 90%;
+    /* Asegurando que el modal esté centrado en la pantalla */
+    position: relative;
+}
+
+.closeModificarUsuario {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+    .closeModificarUsuario:hover,
+    .closeModificarUsuario:focus {
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.contenedorBuscarUsuarioID {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+/*Moda modificar datos usuario*/
+.modal-content-ModificarUsuarioM {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 60%;
+    /* Asegurando que el modal esté centrado en la pantalla */
+    position: relative;
+}
+
+.close-ModificarUsuarioM {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+    .close-ModificarUsuarioM:hover,
+    .close-ModificarUsuarioM:focus {
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/*Moda modificar contraseña usuario*/
+.modal-content-ModificarPasswordUsuarioM {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 60%;
+    /* Asegurando que el modal esté centrado en la pantalla */
+    position: relative;
+}
+
+.close-ModificarPasswordUsuarioM {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+    .close-ModificarPasswordUsuarioM:hover,
+    .close-ModificarPasswordUsuarioM:focus {
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.contenedorRadioButtonEmpleado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rbFiltroEmpleados2, #rbFiltroEmpleados3 {
+    margin-left: 20px;
+}
+
+/**********************************************/
+/* Estilos básicos para el modal de alerta */
+.modalAlerta {
+    display: none; /* Se oculta por defecto */
+    position: fixed;
+    z-index: 2000; /* Aparece encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente con mayor opacidad */
+}
+
+/* Estilos del contenido del modal */
+.modal-content-alerta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
+    width: 350px; /* Ancho aumentado */
+    text-align: center;
+    position: relative; /* Posición relativa para el botón de cierre */
+}
+
+/* Botón de cierre (la X) */
+.close-button-alerta {
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+    .close-button-alerta:hover,
+    .close-button-alerta:focus {
+        color: #333;
+        cursor: pointer;
+    }
+
+/* Botón personalizado para OK */
+#alert-ok-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease; /* Suavizar el cambio de color al pasar el cursor */
+}
+
+    #alert-ok-button:hover {
+        background-color: #45a049;
+    }
+
+/* Estilo de la imagen del modal */
+#alert-image {
+    margin-bottom: 15px;
+    width: 80px;
+    height: 80px;
+}
