@@ -344,28 +344,28 @@ function cargarSubCategorias(ddlComponent) {
     });
 }
 
-function buscarSubCategoriaIdPorNombre(nombre) {
-    var id = null; // Inicializar la variable de retorno
+//function buscarSubCategoriaIdPorNombre(nombre) {
+//    var id = null; // Inicializar la variable de retorno
 
-    $.ajax({
-        type: "POST",
-        url: "InventarioProductos.aspx/obtenerSubCategoriaPorNombre",
-        data: JSON.stringify({ nombreSubCategoria: nombre }),
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        async: false, // Esto es importante para asegurarte de que se espera la respuesta antes de continuar
-        success: function (response) {
-            if (response.d.length > 0) {
-                id = response.d[0].Value; // Asignar el ID de la subcategoría
-            }
-        },
-        error: function (response) {
-            alert("Error al cargar la subcategoría");
-        }
-    });
+//    $.ajax({
+//        type: "POST",
+//        url: "InventarioProductos.aspx/obtenerSubCategoriaPorNombre",
+//        data: JSON.stringify({ nombreSubCategoria: nombre }),
+//        contentType: "application/json; charset=utf-8",
+//        dataType: "json",
+//        async: false, // Esto es importante para asegurarte de que se espera la respuesta antes de continuar
+//        success: function (response) {
+//            if (response.d.length > 0) {
+//                id = response.d[0].Value; // Asignar el ID de la subcategoría
+//            }
+//        },
+//        error: function (response) {
+//            alert("Error al cargar la subcategoría");
+//        }
+//    });
 
-    return id; // Retornar el ID o null si no se encontró
-}
+//    return id; // Retornar el ID o null si no se encontró
+//}
 
 function agregarProducto(event) {
     event.preventDefault(); // Evita que se recargue la página
@@ -497,7 +497,7 @@ function llenarCamposFormModificarProducto(productoId) {
             $('#tbViaAdministracionProductoModificar').val(producto.productoViaAdministracion);
             $('#tbCasaMedicaProductoModificar').val(producto.productoCasaMedica);
             $('#ddlProductoEstado').val(producto.productoEstado);
-            $('#ddlProductoSubCategoriaModificar').val(buscarSubCategoriaIdPorNombre(producto.productoSubCategoria.trim()));
+            $('#ddlProductoSubCategoriaModificar').val(producto.productoSubCategoriaId);
             document.getElementById('ImgProductoModificara').src = producto.productoImg;
             datosOriginalesProducto();
         },

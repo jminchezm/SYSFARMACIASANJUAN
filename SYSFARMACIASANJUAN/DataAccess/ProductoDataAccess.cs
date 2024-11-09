@@ -55,6 +55,7 @@ namespace SYSFARMACIASANJUAN.DataAccess
                                     productoCasaMedica = reader["PRODUCTO_CASAMEDICA"].ToString(),
                                     productoImg = reader["PRODUCTO_IMG"].ToString(),
                                     productoEstado = reader["PRODUCTO_ESTADO"].ToString(),
+                                    productoSubCategoriaId = reader["SUBCATEGORIAPRODUCTO_ID"].ToString(),
                                     productoSubCategoria = reader["SUBCATEGORIAPRODUCTO_NOMBRE"].ToString()
                                 };
 

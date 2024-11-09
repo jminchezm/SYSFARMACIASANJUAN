@@ -330,24 +330,6 @@ namespace SYSFARMACIASANJUAN.Pages
         protected global::System.Web.UI.WebControls.DropDownList ddlPuestoEmpleado;
 
         /// <summary>
-        /// Control lblFotoEmpleado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFotoEmpleado;
-
-        /// <summary>
-        /// Control fuFotoEmpleado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuFotoEmpleado;
-
-        /// <summary>
         /// Control btnGuardarEmpleado.
         /// </summary>
         /// <remarks>
@@ -391,15 +373,6 @@ namespace SYSFARMACIASANJUAN.Pages
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbBuscarEmpleadoID;
-
-        /// <summary>
-        /// Control ImgEmpleadoModificara.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgEmpleadoModificara;
 
         /// <summary>
         /// Control lblIdEmpleadoModificar.
@@ -706,24 +679,6 @@ namespace SYSFARMACIASANJUAN.Pages
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPuestoEmpleadoModificar;
-
-        /// <summary>
-        /// Control lblFotoEmpleadoModificar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFotoEmpleadoModificar;
-
-        /// <summary>
-        /// Control fuFotoEmpleadoModificar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuFotoEmpleadoModificar;
 
         /// <summary>
         /// Control btnGuardarEmpleadoModificar.

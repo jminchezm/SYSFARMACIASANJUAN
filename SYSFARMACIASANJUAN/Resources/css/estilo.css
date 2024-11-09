@@ -332,8 +332,14 @@ img {
         text-align: left;
     }
 
+    #contenedor-tabla thead th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
     #contenedor-tabla th {
-        background-color: #4CAF50;
+        background-color: #048ABF;
         color: white;
         font-weight: bold;
         text-transform: uppercase;

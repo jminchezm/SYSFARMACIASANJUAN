@@ -49,7 +49,8 @@
                     <a href="#" class ="submenu-toggle"><i class="fas fa-cash-register"></i> Ventas</a>
                     <ul class ="submenu">
                         <li><a href="#"> <i class ="fas fa-boxes"></i>Productos</a></li>
-                        <li><a href="#"> <i class ="fas fa-users"></i> Clientes</a></li>
+                        <li><a href="#" onclick="loadContent('ModuloCliente.aspx')"> <i class ="fas fa-users"></i>Clientes</a></li>
+                        <li><a href="#" onclick="loadContent('ModuloVentasVenta.aspx')"> <i class ="fas fa-cash-register"></i>Ventas</a></li>
                         <li><a href="#"> <i class ="fas fa-file-invoice-dollar"></i>Facturacion</a></li>
                         <li><a href="#"> <i class ="fas fa-file-alt"></i>Reportes</a></li>
                         <li> <a href="#"> <i class="fas fa-chart-line"></i>Historial de Ventas </a></li>
@@ -62,9 +63,9 @@
                     <ul class ="submenu">
                         <li> <a href="#" onclick="loadContent('InventarioProductos.aspx')"> <i class ="fas fa-box-open"></i>Productos</a></li>
                         <li> <a href="#" onclick="loadContent('InventarioPedidos.aspx')"> <i class ="fas fa-clipboard-list"></i>Pedido</a></li>
-                        <li> <a href="#"> <i class ="fas fa-shopping-cart"></i>Compras</a></li>
-                        <li> <a href="#"> <i class ="fas fa-tags"></i>Categoría Producto</a></li>
-                        <li> <a href="#"> <i class ="fas fa-truck"></i>Proveedor</a></li>
+                        <%--<li> <a href="#"> <i class ="fas fa-shopping-cart"></i>Compras</a></li>--%>
+                        <li> <a href="#" onclick="loadContent('ModuloCategoria.aspx')"> <i class ="fas fa-tags"></i>Categoría Producto</a></li>
+                        <li> <a href="#" onclick="loadContent('ModuloProveedor.aspx')"> <i class ="fas fa-truck"></i>Proveedor</a></li>
                         <li> <a href="#"> <i class ="fas fa-warehouse"></i>Kardex</a></li>
 
                     </ul>
@@ -76,7 +77,7 @@
                     <ul class="submenu">
                         <li><a href="#" onclick="loadContent('ModuloEmpleado.aspx')"><i class="fas fa-user-tie"></i> Empleados</a></li>
                         <li><a href="#" onclick="loadContent('ModuloUsuarios.aspx')"><i class="fas fa-user"></i> Usuario</a></li>                        
-                        <li><a href="#"><i class="fas fa-book"></i> Bitácora</a></li>                    
+                        <%--<li><a href="#"><i class="fas fa-book"></i> Bitácora</a></li> --%>                   
                     </ul>
                 </li>
 

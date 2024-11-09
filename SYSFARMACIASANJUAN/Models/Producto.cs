@@ -17,6 +17,7 @@ namespace SYSFARMACIASANJUAN.Models
         public string productoCasaMedica {  get; set; }
         public string productoImg { get; set; }
         public string productoEstado { get; set; }
+        public string productoSubCategoriaId { get; set; }
         public string productoSubCategoria { get; set; }
     }
 }

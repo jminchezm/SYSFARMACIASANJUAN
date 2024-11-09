@@ -231,6 +231,7 @@ function datosOriginalesUsuario() {
         idRol: $('#ddlRolUsuarioModificar').val()
     };
 
+    /*alert($('#tbCorreoUsuarioModificar').val());*/
 }
 
 
@@ -279,6 +280,7 @@ function modificarDatosUsuario(id) {
             // Llenar los campos del formulario con los datos del usuario
             document.getElementById('tbIdUsuarioModificar').value = usuario.idUsuario;
             document.getElementById('tbNombreUsuarioModificar').value = usuario.nombreUsuario;
+            /*alert(usuario.correoUsuario);*/
             document.getElementById('tbCorreoUsuarioModificar').value = usuario.correoUsuario;
             document.getElementById('ddlRolUsuarioModificar').value = usuario.idRol;
             datosOriginalesUsuario();
@@ -318,7 +320,7 @@ function modificarDatosUsuarioAccion() {
     var usuario = {
         idUsuario: $('#tbIdUsuarioModificar').val() === '' ? null : $('#tbIdUsuarioModificar').val(),
         nombreUsuario: $('#tbNombreUsuarioModificar').val() === '' ? null : $('#tbNombreUsuarioModificar').val(),
-        correoUsuario: $('#tbCorreoUsuarioModificar').val() === '' ? null : $('#tbCorreoUsuarioModificar').val(),
+        correoUsuario: $('#tbCorreoUsuarioModificar').val(),
         idRol: $('#ddlRolUsuarioModificar').val() === '' ? null : $('#ddlRolUsuarioModificar').val(),
     };
 
@@ -343,6 +345,7 @@ function modificarDatosUsuarioAccion() {
             data: JSON.stringify(usuario),
             success: function (response) {
                 /*alert("Usuario modificado exitosamente");*/
+                /*alert('Hola');*/
                 customAlert("Usuario modificado exitosamente", "../Resources/img/usuarioModificadoAlerta.gif");
                 $('#modalModificarUsuarioM').hide();
                 mostrarListaTablaDeUsuarios();
@@ -466,7 +469,8 @@ function cambiarContraseñaUsuario() {
                 document.getElementById('tbContraseñaNuevaModificarUsuario').value = "";
                 document.getElementById('tbConfirmarContraseñaModificarUsuario').value = "";
             } else {
-                alert(data.d); // Mostrar el mensaje de error devuelto por el servidor
+               /* alert(data.d);*/ // Mostrar el mensaje de error devuelto por el servidor
+                customAlert(data.d, "../Resources/img/contrasenaIncorrecta.png");
             }
         })
         .catch(error => {

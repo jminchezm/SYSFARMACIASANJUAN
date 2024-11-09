@@ -66,7 +66,10 @@ body, html {
 
 .input-group {
     width: 24%;
+    /*height: 7px;*/
+    /*height: 100%;*/
     /*margin-bottom: 10px;*/
+    /*background-color:black;*/
 }
 
 .input-group-text {
@@ -129,14 +132,28 @@ body, html {
     }
 }
 
-#modal-content-id {
+#modal-content-id, #modal-content-modalVerPedido {
     width: 95%;
     max-width: 100%;
     height: 98%;
     max-height: 100%;
 }
 
-/* Estilos para el modal */
+#modal-content-modalDetallePedido {
+    width: 100%;
+    max-width: 40%;
+    height: 100%;
+    max-height: 55%;
+}
+
+#modal-content-modalModificarDetallePedido {
+    width: 100%;
+    max-width: 40%;
+    height: 100%;
+    max-height: 60%;
+}
+
+/* Estilos para el modal */ 
 .modal {
     display: none; /* Esto oculta el modal por defecto */
     position: fixed;
@@ -151,6 +168,10 @@ body, html {
     align-items: center;
     /* Centrando el modal horizontal y verticalmente */
     display: flex;
+}
+
+#modalDetallePedido {
+    z-index: 2;
 }
 
 .modal-content {
@@ -252,33 +273,42 @@ body, html {
 
 /*Asignación de estilo para la tabla*/
 /* Estilos generales para la tabla */
-#contenedor-tabla {
+#areaDetallePedido, #areaVerDetallePedido {
+    height: 100%;
+    max-height: 68%; /* Ajusta la altura según tus necesidades */
+    overflow-y: auto; /* Habilitar el scroll vertical */
+    background-color: lightgray;
+    margin-bottom: 5px;
+    /*margin-top: 20px;*/
+}
+
+#contenedor-tabla{
     max-height: 80%; /* Ajusta la altura según tus necesidades */
     overflow-y: auto; /* Habilitar el scroll vertical */
     margin-top: 20px;
 }
 
-    #contenedor-tabla table {
+    #contenedor-tabla table, #areaDetallePedido table, #areaVerDetallePedido table {
         width: 100%;
         border-collapse: collapse;
         font-family: Arial, sans-serif;
         /*font-size:small;*/
     }
 
-    #contenedor-tabla th, #contenedor-tabla td {
+    #contenedor-tabla th, #contenedor-tabla td, #areaDetallePedido th, #areaDetallePedido td, #areaVerDetallePedido th, #areaVerDetallePedido td {
         border: 1px solid #ddd;
         padding: 10px;
         text-align: center;
     }
 
     /*Permite que los titulos de la tabla queden fijos*/
-    #contenedor-tabla thead th {
+    #contenedor-tabla thead th, #areaDetallePedido thead th, #areaVerDetallePedido thead th {
         position: sticky;
         top: 0;
         z-index: 1;
     }
 
-    #contenedor-tabla th {
+    #contenedor-tabla th, #areaDetallePedido th, #areaVerDetallePedido th {
         background-color: #048ABF;
         color: white;
         font-weight: bold;
@@ -286,17 +316,17 @@ body, html {
     }
 
     /* Estilo para las filas pares de la tabla */
-    #contenedor-tabla tr:nth-child(even) {
+    #contenedor-tabla tr:nth-child(even), #areaDetallePedido tr:nth-child(even), #areaVerDetallePedido tr:nth-child(even) {
         background-color: #f2f2f2;
     }
 
     /* Estilo para las filas al pasar el cursor */
-    #contenedor-tabla tr:hover {
+    #contenedor-tabla tr:hover, #areaDetallePedido tr:hover, #areaVerDetallePedido tr:hover {
         background-color: #ddd;
     }
 
     /* Estilo para el botón dentro de la tabla */
-    #contenedor-tabla button.modificarBtn, button.eliminarBtn {
+    button.modificarBtn, button.eliminarBtn {
         background-color: #f39c12;
         color: white;
         padding: 10px 10px;
@@ -305,31 +335,31 @@ body, html {
         cursor: pointer;
     }
 
-        #contenedor-tabla button.modificarBtn:hover, button.eliminarBtn:hover {
+        button.modificarBtn:hover, button.eliminarBtn:hover {
             background-color: #e67e22;
         }
 
 /* Estilos para la tabla responsiva */
 @media screen and (max-width: 768px) {
-    #contenedor-tabla table, #contenedor-tabla th, #contenedor-tabla td {
+    #contenedor-tabla table, #contenedor-tabla th, #contenedor-tabla td, #areaDetallePedido table, #areaDetallePedido th, #areaDetallePedido td, #areaVerDetallePedido table, #areaVerDetallePedido th, #areaVerDetallePedido td {
         display: block;
         width: 100%;
     }
 
-    #contenedor-tabla th {
+    #contenedor-tabla th, #areaDetallePedido th, #areaVerDetallePedido th {
         text-align: right;
         padding-right: 20px;
         background-color: #333;
         color: white;
     }
 
-    #contenedor-tabla td {
+    #contenedor-tabla td, #areaDetallePedido td, #areaVerDetallePedido td {
         text-align: right;
         padding-left: 50%;
         position: relative;
     }
 
-        #contenedor-tabla td::before {
+        #contenedor-tabla td::before, #areaDetallePedido td::before, #areaVerDetallePedido td::before {
             content: attr(data-label);
             position: absolute;
             left: 0;
@@ -340,9 +370,10 @@ body, html {
         }
 }
 
-#areaAccionProductos {
+#areaAccionDetallePedido {
     display: flex;
-    flex-direction: column;
+    height: 100px;
+    /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
 }
@@ -351,16 +382,14 @@ body, html {
     height: 65%;
 }*/
 
-#btnEliminarProducto {
-    margin-top: 10%;
-    /*background-color: red;*/
-    width: 100%;
+#btnEliminarDetallePedido {
+    margin-left: 10px;
 }
 
-#eliminarProductoBtn {
-    width: 100%;
-    /*background-color: red;*/
-}
+/*#eliminarDetallePedidoBtn {*/
+/*    width: 100%;*/
+    /*background-color: red;
+}*/
 
 #fotoProductoModificar {
     display: flex;
@@ -440,75 +469,111 @@ body, html {
 }
 
 /*----Area del pedido del producto----*/
-#containerPedido {
-    height:100%;
+#containerPedido, #containerVerPedido {
+    height: 100%;
+    max-height: 88%;
     /*background-color:red;*/
 }
 /*Area de campos para crear pedido*/
-#camposPedido {
+#camposPedido, #camposVerPedido {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 9%;
+    /*max-height: 7%;*/
+    /*margin-bottom: 0.2%;*/
     /*padding-left: 10px;
     padding-right: 10px;*/
-    /*background-color: red;*/
+    /* background-color: red;*/
 }
 
-#buscadorProductoPedido {
+#containerPedidoObservacion, #containerVerPedidoObservacion {
     display: flex;
+    /*justify-content:center;*/
+    /*align-items:center;*/
+    /*position: relative;*/
+    /*flex-wrap: wrap;*/
+    /* justify-content: space-between;
+    align-items: center;*/
+    /*justify-content:center;
+    align-items: center;*/
+    width: 100%;
     height: 7%;
-    position:relative;
-    justify-content:center;
+    /*margin-bottom: 0.4%;*/
+    /*background-color: blue;*/
+}
+
+#tbPedidoObservacion, #tbVerPedidoObservacion {
+    width: 80%;
+}
+
+#lblVerPedidoObservacion {
+    /*width: 80%;*/
+    height:100%;
+    max-height: 100%;
+}
+
+#btnGenerarPedido, #btnVerModificarDetallePedido {
+    width: 20%;
+    margin-left: 5px;
+}
+
+#buscadorProductoPedido, #buscadorVerProductoPedido {
+    display: flex;
+    height: 9%;
+    position: relative;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     /*margin-left: 0.8%;
     margin-right: 0.8%;*/
     /*background-color: aquamarine;*/
 }
 
-/*#inputBuscarProducto {*/
-    /*width:100%;*/
-    /*background-color: blue;
-}*/
+#tbMostrarPedidoID, #lblVerMostrarPedidoID {
+    width: 100%;
+    max-width: 20%;
+}
 
-#tbbuscadorProductoPedido {
-    width:100%;
+#inputBuscarProducto, #inputVerBuscarProducto {
+    /*width: 100%;*/
+    max-width: 70%;
 }
-/*Area en donde se ve el detalle del producto*/
-#areaDetallePedido {
-    height: 93%;
-    /*margin-left: 0.8%;
-    margin-right: 0.8%;*/
-    /*margin: 1%;*/
-    background-color: gray;
+
+#tbbuscadorProductoPedido, #tbbuscadorVerProductoPedido {
+    width: 100%;
+    background-color: red;
 }
+
+
 /*Buscador de productos (creación de pedido)*/
 
-#resultadoBusqueda {
+#resultadoBusqueda, #verResultadoBusqueda {
     background-color: #f0f0f5; /* Fondo claro */
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 70%;
     max-height: 200px;
     overflow-y: auto;
     display: none; /* Oculto por defecto */
 
     position: absolute; /* Posición absoluta para usar z-index */
     top: 100%; /* Ajusta la posición como prefieras */
-    left: 0;
+    left: 30%;
     z-index: 1000; /* Asegura que esté al frente */
 }
 
-    #resultadoBusqueda p {
+    #resultadoBusqueda p, #verResultadoBusqueda p {
         margin: 5px 0;
         padding: 5px;
         cursor: pointer;
     }
 
-        #resultadoBusqueda p:hover {
+        #resultadoBusqueda p:hover, #verResultadoBusqueda p:hover {
             background-color: #e0e0eb; /* Fondo para resaltar al pasar el cursor */
         }
 
@@ -516,6 +581,23 @@ body, html {
 .no-result {
     color: #a94442;
     font-weight: bold;
+}
+
+/*Modal detalle pedido*/
+#fotoDetallePedidoProducto {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /*background-color:antiquewhite;*/
+}
+
+#detallePedidoIdsImg {
+    display: felx;
+}
+
+#detallePedidoIdProductoId {
+    width:50%;
 }
 
 

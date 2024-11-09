@@ -24,40 +24,40 @@ namespace SYSFARMACIASANJUAN.Pages
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control tbBuscarProductoPorID.
+        /// Control tbBuscarPedidosPorID.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbBuscarProductoPorID;
+        protected global::System.Web.UI.WebControls.TextBox tbBuscarPedidosPorID;
 
         /// <summary>
-        /// Control tbBuscarProductoPorNombre.
+        /// Control tbBuscarPedidosFechaCreacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbBuscarProductoPorNombre;
+        protected global::System.Web.UI.WebControls.TextBox tbBuscarPedidosFechaCreacion;
 
         /// <summary>
-        /// Control tbBuscarProductoFechaCreacion.
+        /// Control ddlBuscarPedidoPorEstado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbBuscarProductoFechaCreacion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBuscarPedidoPorEstado;
 
         /// <summary>
-        /// Control ddlBuscarPorEstado.
+        /// Control ddlBuscarPedidoProveedor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBuscarPorEstado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBuscarPedidoProveedor;
 
         /// <summary>
         /// Control lblPedidoFechaCreacion.
@@ -96,6 +96,42 @@ namespace SYSFARMACIASANJUAN.Pages
         protected global::System.Web.UI.WebControls.DropDownList ddlPedidoProveedor;
 
         /// <summary>
+        /// Control tbPedidoObservacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbPedidoObservacion;
+
+        /// <summary>
+        /// Control btnGenerarPedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenerarPedido;
+
+        /// <summary>
+        /// Control tbMostrarPedidoID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbMostrarPedidoID;
+
+        /// <summary>
+        /// Control inputBuscarProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputBuscarProducto;
+
+        /// <summary>
         /// Control btnGuardarPedido.
         /// </summary>
         /// <remarks>
@@ -105,94 +141,85 @@ namespace SYSFARMACIASANJUAN.Pages
         protected global::System.Web.UI.WebControls.Button btnGuardarPedido;
 
         /// <summary>
-        /// Control lblPedidoDetalleFechaCreacion.
+        /// Control lblDetallePedidoId.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPedidoDetalleFechaCreacion;
+        protected global::System.Web.UI.WebControls.Label lblDetallePedidoId;
 
         /// <summary>
-        /// Control tbPedidoDetalleFechaActual.
+        /// Control tbDetallePedidoId.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPedidoDetalleFechaActual;
+        protected global::System.Web.UI.WebControls.TextBox tbDetallePedidoId;
 
         /// <summary>
-        /// Control lblPedidoDetalleEstado.
+        /// Control lblDetallePedidoProductoId.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPedidoDetalleEstado;
+        protected global::System.Web.UI.WebControls.Label lblDetallePedidoProductoId;
 
         /// <summary>
-        /// Control tbPedidoDetalleEstado.
+        /// Control tbDetallePedidoProductoId.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPedidoDetalleEstado;
+        protected global::System.Web.UI.WebControls.TextBox tbDetallePedidoProductoId;
 
         /// <summary>
-        /// Control lblPedidoDetalleFechaEstimada.
+        /// Control ImgDetallePedidoProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPedidoDetalleFechaEstimada;
+        protected global::System.Web.UI.WebControls.Image ImgDetallePedidoProducto;
 
         /// <summary>
-        /// Control tbPedidoDetalleFechaEstimada.
+        /// Control lblDetallePedidoProductoNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPedidoDetalleFechaEstimada;
+        protected global::System.Web.UI.WebControls.Label lblDetallePedidoProductoNombre;
 
         /// <summary>
-        /// Control lblPedidoDetalleProveedor.
+        /// Control tbDetallePedidoProductoNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPedidoDetalleProveedor;
+        protected global::System.Web.UI.WebControls.TextBox tbDetallePedidoProductoNombre;
 
         /// <summary>
-        /// Control ddlPedidoDetalleProveedor.
+        /// Control lblDetallePedidoProductoCantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPedidoDetalleProveedor;
+        protected global::System.Web.UI.WebControls.Label lblDetallePedidoProductoCantidad;
 
         /// <summary>
-        /// Control lblPedidoDetalleObservacion.
+        /// Control tbDetallePedidoProductoCantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPedidoDetalleObservacion;
-
-        /// <summary>
-        /// Control ddlPedidoDetalleObservacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ddlPedidoDetalleObservacion;
+        protected global::System.Web.UI.WebControls.TextBox tbDetallePedidoProductoCantidad;
 
         /// <summary>
         /// Control btnGuardarPedidoDetalle.
@@ -202,5 +229,338 @@ namespace SYSFARMACIASANJUAN.Pages
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarPedidoDetalle;
+
+        /// <summary>
+        /// Control lblModificarDetallePedidoId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarDetallePedidoId;
+
+        /// <summary>
+        /// Control tbModificarDetallePedidoId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarDetallePedidoId;
+
+        /// <summary>
+        /// Control lblModificarDetallePedidoProductoId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarDetallePedidoProductoId;
+
+        /// <summary>
+        /// Control tbModificarDetallePedidoProductoId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarDetallePedidoProductoId;
+
+        /// <summary>
+        /// Control lblModificarItemDetallePedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarItemDetallePedido;
+
+        /// <summary>
+        /// Control tbModificarItemDetallePedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarItemDetallePedido;
+
+        /// <summary>
+        /// Control ImgModificarDetallePedidoProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImgModificarDetallePedidoProducto;
+
+        /// <summary>
+        /// Control lblModificarDetallePedidoProductoNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarDetallePedidoProductoNombre;
+
+        /// <summary>
+        /// Control tbModificarDetallePedidoProductoNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarDetallePedidoProductoNombre;
+
+        /// <summary>
+        /// Control lblModificarDetallePedidoProductoCantidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarDetallePedidoProductoCantidad;
+
+        /// <summary>
+        /// Control tbModificarDetallePedidoProductoCantidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarDetallePedidoProductoCantidad;
+
+        /// <summary>
+        /// Control btnGuardarModificarPedidoDetalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardarModificarPedidoDetalle;
+
+        /// <summary>
+        /// Control lblVerPedidoFechaCreacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVerPedidoFechaCreacion;
+
+        /// <summary>
+        /// Control lblVerPedidoEstado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVerPedidoEstado;
+
+        /// <summary>
+        /// Control lblVerPedidoFechaEstimada.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVerPedidoFechaEstimada;
+
+        /// <summary>
+        /// Control ddlVerPedidoProveedor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlVerPedidoProveedor;
+
+        /// <summary>
+        /// Control lblVerPedidoObservacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVerPedidoObservacion;
+
+        /// <summary>
+        /// Control lblVerMostrarPedidoID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVerMostrarPedidoID;
+
+        /// <summary>
+        /// Control inputVerBuscarProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox inputVerBuscarProducto;
+
+        /// <summary>
+        /// Control btnConfirmarPedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConfirmarPedido;
+
+        /// <summary>
+        /// Control btnImprimirPedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnImprimirPedido;
+
+        /// <summary>
+        /// Control lblModificarVerDetallePedidoId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarVerDetallePedidoId;
+
+        /// <summary>
+        /// Control tbModificarVerDetallePedidoId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarVerDetallePedidoId;
+
+        /// <summary>
+        /// Control lblModificarVerDetallePedidoProductoId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarVerDetallePedidoProductoId;
+
+        /// <summary>
+        /// Control tbModificarVerDetallePedidoProductoId.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarVerDetallePedidoProductoId;
+
+        /// <summary>
+        /// Control lblModificarVerItemDetallePedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarVerItemDetallePedido;
+
+        /// <summary>
+        /// Control tbModificarVerItemDetallePedido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarVerItemDetallePedido;
+
+        /// <summary>
+        /// Control ImgModificarVerDetallePedidoProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImgModificarVerDetallePedidoProducto;
+
+        /// <summary>
+        /// Control lblModificarVerDetallePedidoProductoNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarVerDetallePedidoProductoNombre;
+
+        /// <summary>
+        /// Control tbModificarVerDetallePedidoProductoNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarVerDetallePedidoProductoNombre;
+
+        /// <summary>
+        /// Control lblModificarVerDetallePedidoProductoCantidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModificarVerDetallePedidoProductoCantidad;
+
+        /// <summary>
+        /// Control tbModificarVerDetallePedidoProductoCantidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarVerDetallePedidoProductoCantidad;
+
+        /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
+        /// Control tbModificarVerDetallePedidoProductoPrecio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarVerDetallePedidoProductoPrecio;
+
+        /// <summary>
+        /// Control Label2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
+        /// Control tbModificarVerDetallePedidoProductoAumento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbModificarVerDetallePedidoProductoAumento;
+
+        /// <summary>
+        /// Control btnGuardarModificarVerPedidoDetalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardarModificarVerPedidoDetalle;
     }
 }

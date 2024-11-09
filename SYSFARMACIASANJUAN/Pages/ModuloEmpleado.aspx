@@ -7,8 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="../Resources/css/estilo.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <%--<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>--%>
     <title>Módulo de Empleados - Sys_FarmaciaSanJuan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,13 +22,13 @@
             <section class="opcionesModuloEmpleado">
                 <div class="opcionFila1ModuloEmpleado">
                     <article class="articleOpcionModuloEmpleado">
-                        <button class="botonRegistrarEmpleado" onclick="abrirModalAgregarEmpleado()">
+                        <button class="botonRegistrarEmpleado">
                         <img src="../Resources/img/agregar-empleado.png" alt="Registrar Empleado" />
                         </button>
                         <h2 class="h2-opcion">Nuevo Empleado</h2>
                     </article>
                     <article class="articleOpcionModuloEmpleado">
-                        <button class="botonModificarEmpleado" id="botonModificarEmpleadoID" runat="server" onclick="abrirModalModificarEmpleado()">
+                        <button class="botonModificarEmpleado" id="botonModificarEmpleadoID" runat="server">
                         <img src="../Resources/img/editar-empleado.png" alt="Registrar Empleado" />
                         </button>
                         <h2 class="h2-opcion">Lista Empleados</h2>
@@ -172,12 +172,12 @@
                     </div>
                 </div>
             
-                <div class="form-row">
+                <%--<div class="form-row">
                     <div class="form-group col-md-12">
                         <asp:Label ID="lblFotoEmpleado" runat="server" Text="Foto"></asp:Label>
                         <asp:FileUpload ID="fuFotoEmpleado" runat="server" CssClass="form-control-file"/>
                     </div>
-                </div>
+                </div>--%>
             
                 <div class="form-row">
                     <div class="form-group col-md-12 text-right">
@@ -213,9 +213,9 @@
             <div class="modal-content-ModificarEmpleadoM">
                 <span class="close-ModificarEmpleadoM">&times;</span>
                 <h2>Modificar Empleado</h2>
-                <div class="fotoEmpleadoModificar">
+                <%--<div class="fotoEmpleadoModificar">
                     <asp:Image ID="ImgEmpleadoModificara" runat="server" />
-                </div>
+                </div>--%>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <asp:Label ID="lblIdEmpleadoModificar" runat="server" Text="Id Empleado"></asp:Label>
@@ -312,8 +312,8 @@
                         </asp:DropDownList>
                     </div>
                     <div class="form-group col-md-4">
-                        <asp:Label ID="lblFotoEmpleadoModificar" runat="server" Text="Foto"></asp:Label>
-                        <asp:FileUpload ID="fuFotoEmpleadoModificar" runat="server" CssClass="form-control-file"/>
+                        <%--<asp:Label ID="lblFotoEmpleadoModificar" runat="server" Text="Foto"></asp:Label>
+                        <asp:FileUpload ID="fuFotoEmpleadoModificar" runat="server" CssClass="form-control-file"/>--%>
                     </div>
                 </div>    
                 <div class="form-row">

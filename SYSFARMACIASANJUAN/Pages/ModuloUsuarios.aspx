@@ -7,8 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="../Resources/css/estilo.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <%--<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>--%>
     <title>Módulo de Empleados - Sys_FarmaciaSanJuan</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -57,7 +57,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <asp:Label ID="Label2" runat="server" Text="Elige al Empleado*"></asp:Label>
-                        <asp:DropDownList ID="ddlIdEmpleadoUsuario" runat="server" CssClass="form-control" onchange="actualizarTextBoxNombreCompleto()" required="true">
+                        <asp:DropDownList ID="ddlIdEmpleadoUsuario" runat="server" CssClass="form-control" required="true">
                         </asp:DropDownList>
                     </div>
                     <div class="form-group col-md-6">

@@ -265,14 +265,26 @@
     <Content Include="Pages\InventarioPedidos.aspx" />
     <Content Include="Pages\InventarioProductos.aspx" />
     <Content Include="Pages\login.aspx" />
+    <Content Include="Pages\ModuloCategoria.aspx" />
+    <Content Include="Pages\ModuloCliente.aspx" />
     <Content Include="Pages\ModuloEmpleado.aspx" />
+    <Content Include="Pages\ModuloProveedor.aspx" />
     <Content Include="Pages\ModuloUsuarios.aspx" />
+    <Content Include="Pages\ReporteCategorias.aspx" />
+    <Content Include="Pages\ReporteCliente.aspx" />
     <Content Include="Pages\ReporteEmpleados.aspx" />
     <Content Include="Pages\ReporteProductos.aspx" />
+    <Content Include="Pages\ReporteProveedores.aspx" />
     <Content Include="Pages\ReporteUsuarios.aspx" />
+    <Content Include="Pages\ModuloVentasVenta.aspx" />
     <Content Include="Resources\css\estilo.css" />
     <Content Include="Resources\css\normalize.css" />
+    <Content Include="Resources\css\StylesModuloInventario\estiloCategoria.css" />
+    <Content Include="Resources\css\StylesModuloInventario\estiloProveedor.css" />
+    <Content Include="Resources\css\StylesModuloInventario\estiloSubCategoria.css" />
     <Content Include="Resources\css\StylesModuloInventario\stylesInventarioPedidos.css" />
+    <Content Include="Resources\css\StylesModuloVentas\estiloCliente.css" />
+    <Content Include="Resources\css\StylesModuloVentas\stylesModuloVentasVenta.css" />
     <Content Include="Resources\css\Styles_HomeInicio\StyleHomeInicio.css" />
     <Content Include="Resources\css\Styles_Home\stylesHome.css" />
     <Content Include="Resources\css\StylesModuloInventario\stylesInventarioProductos.css" />
@@ -282,26 +294,42 @@
     <Content Include="Resources\css\Styles_Reporte\estilosReporteEmpleado.css" />
     <Content Include="Resources\css\Styles_Reporte\estilosReporteProductos.css" />
     <Content Include="Resources\css\Styles_Reporte\estilosReporteUsuarios.css" />
+    <Content Include="Resources\img\actualizarproveedor.png" />
     <Content Include="Resources\img\advertenciaCamposObligatorios.gif" />
     <Content Include="Resources\img\agregar-empleado.png" />
+    <Content Include="Resources\img\AgregarCliente.png" />
+    <Content Include="Resources\img\agregarpro.png" />
     <Content Include="Resources\img\alerta.gif" />
+    <Content Include="Resources\img\calendario.png" />
     <Content Include="Resources\img\cambioContraseñaUsuario.gif" />
+    <Content Include="Resources\img\cerrar.png" />
+    <Content Include="Resources\img\cliente_modificado.png" />
+    <Content Include="Resources\img\confirmarPedido.png" />
     <Content Include="Resources\img\contrasenaIncorrecta.png" />
+    <Content Include="Resources\img\crear_cliente.png" />
     <Content Include="Resources\img\editar-empleado.png" />
+    <Content Include="Resources\img\editar.png" />
+    <Content Include="Resources\img\eliminarPedido.gif" />
     <Content Include="Resources\img\eliminar_empleado.png" />
     <Content Include="Resources\img\eliminar_usuario.png" />
     <Content Include="Resources\img\empleadoAgregadoAlerta.gif" />
     <Content Include="Resources\img\empleadoModificadoAlerta.gif" />
+    <Content Include="Resources\img\guardar-el-archivo.png" />
+    <Content Include="Resources\img\guardar_cliente.png" />
     <Content Include="Resources\img\Home\aprobar.png" />
     <Content Include="Resources\img\Home\logo.jpeg" />
     <Content Include="Resources\img\Home\portada.png" />
     <Content Include="Resources\img\imgPorDefecto.png" />
     <Content Include="Resources\img\ImgProductos\productoAgregado.gif" />
     <Content Include="Resources\img\ImgProductos\productoModificado.gif" />
+    <Content Include="Resources\img\lisproveedor.png" />
+    <Content Include="Resources\img\listarcategoria.png" />
+    <Content Include="Resources\img\listar_cliente.png" />
     <Content Include="Resources\img\lista_empleados.png" />
     <Content Include="Resources\img\lista_usuarios.png" />
     <Content Include="Resources\img\Login\iconoLogin.gif" />
     <Content Include="Resources\img\Login\usuario.png" />
+    <Content Include="Resources\img\medicamento.png" />
     <Content Include="Resources\img\modificar_usuario.png" />
     <Content Include="Resources\img\nuevo_usuario.png" />
     <Content Include="Resources\img\PaginaInformativa\almacenar.gif" />
@@ -345,12 +373,19 @@
     <Content Include="Resources\img\PaginaInformativa\vision.gif" />
     <Content Include="Resources\img\PaginaInformativa\whatsapp.png" />
     <Content Include="Resources\img\PaginaInformativa\x.png" />
+    <Content Include="Resources\img\reporte_cliente.png" />
+    <Content Include="Resources\img\tarea.png" />
     <Content Include="Resources\img\usuarioAgregadoAlerta.gif" />
     <Content Include="Resources\img\usuarioModificadoAlerta.gif" />
+    <Content Include="Resources\js\CRUDCategoria.js" />
+    <Content Include="Resources\js\CRUDClientes.js" />
     <Content Include="Resources\js\CRUDEmpleados.js" />
+    <Content Include="Resources\js\CRUDEProveedor.js" />
     <Content Include="Resources\js\CRUDPedidos.js" />
     <Content Include="Resources\js\CRUDProductos.js" />
+    <Content Include="Resources\js\CRUDSubCategoria.js" />
     <Content Include="Resources\js\CRUDUsuarios.js" />
+    <Content Include="Resources\js\CRUDVentas.js" />
     <Content Include="Resources\js\Login.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -506,9 +541,17 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Bussines\CategoriaServices.cs" />
+    <Compile Include="Bussines\ClienteServices.cs" />
+    <Compile Include="Bussines\DetallePedidoServices.cs" />
     <Compile Include="Bussines\EmpleadoServices.cs" />
+    <Compile Include="Bussines\InventarioProductoServices.cs" />
+    <Compile Include="Bussines\PedidoServices.cs" />
     <Compile Include="Bussines\ProductoServices.cs" />
+    <Compile Include="Bussines\ProveedorServices.cs" />
+    <Compile Include="Bussines\SubCategoriaServices.cs" />
     <Compile Include="Bussines\UsuarioServices.cs" />
+    <Compile Include="Bussines\VentaServices.cs" />
     <Compile Include="CamposRepProductos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -521,12 +564,28 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\DetalleProductosController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\InventarioProductosController.cs" />
+    <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ProveedoresController.cs" />
+    <Compile Include="Controllers\SubCategoriasController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
+    <Compile Include="DataAccess\CategoriaDataAccess.cs" />
+    <Compile Include="DataAccess\ClienteDataAccess.cs" />
+    <Compile Include="DataAccess\DetallePedidoDataAccess.cs" />
     <Compile Include="DataAccess\EmpleadoDataAccess.cs" />
+    <Compile Include="DataAccess\InventarioProductoDataAccess.cs" />
+    <Compile Include="DataAccess\PedidoDataAccess.cs" />
     <Compile Include="DataAccess\ProductoDataAccess.cs" />
+    <Compile Include="DataAccess\ProveedorDataAcces.cs" />
+    <Compile Include="DataAccess\SubCategoriaDataAccess.cs" />
     <Compile Include="DataAccess\UsuarioDataAccess.cs" />
+    <Compile Include="DataAccess\VentaDataAccess.cs" />
     <Compile Include="dbfarmaciasanjuanDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -562,9 +621,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\DetallePedido.cs" />
     <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\InventarioProducto.cs" />
+    <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\Proveedor.cs" />
+    <Compile Include="Models\SubCategoria.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Venta.cs" />
     <Compile Include="Pages\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -600,6 +667,20 @@
     <Compile Include="Pages\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ModuloCategoria.aspx.cs">
+      <DependentUpon>ModuloCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ModuloCategoria.aspx.designer.cs">
+      <DependentUpon>ModuloCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ModuloCliente.aspx.cs">
+      <DependentUpon>ModuloCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ModuloCliente.aspx.designer.cs">
+      <DependentUpon>ModuloCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ModuloEmpleado.aspx.cs">
       <DependentUpon>ModuloEmpleado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -607,12 +688,33 @@
     <Compile Include="Pages\ModuloEmpleado.aspx.designer.cs">
       <DependentUpon>ModuloEmpleado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ModuloProveedor.aspx.cs">
+      <DependentUpon>ModuloProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ModuloProveedor.aspx.designer.cs">
+      <DependentUpon>ModuloProveedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ModuloUsuarios.aspx.cs">
       <DependentUpon>ModuloUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\ModuloUsuarios.aspx.designer.cs">
       <DependentUpon>ModuloUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReporteCategorias.aspx.cs">
+      <DependentUpon>ReporteCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ReporteCategorias.aspx.designer.cs">
+      <DependentUpon>ReporteCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReporteCliente.aspx.cs">
+      <DependentUpon>ReporteCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ReporteCliente.aspx.designer.cs">
+      <DependentUpon>ReporteCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ReporteEmpleados.aspx.cs">
       <DependentUpon>ReporteEmpleados.aspx</DependentUpon>
@@ -628,12 +730,26 @@
     <Compile Include="Pages\ReporteProductos.aspx.designer.cs">
       <DependentUpon>ReporteProductos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ReporteProveedores.aspx.cs">
+      <DependentUpon>ReporteProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ReporteProveedores.aspx.designer.cs">
+      <DependentUpon>ReporteProveedores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ReporteUsuarios.aspx.cs">
       <DependentUpon>ReporteUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\ReporteUsuarios.aspx.designer.cs">
       <DependentUpon>ReporteUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ModuloVentasVenta.aspx.cs">
+      <DependentUpon>ModuloVentasVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ModuloVentasVenta.aspx.designer.cs">
+      <DependentUpon>ModuloVentasVenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -663,10 +779,14 @@
     <Folder Include="App_Data\" />
     <Folder Include="Data\" />
     <Folder Include="Uploads\" />
+    <Folder Include="Views\DetalleProductos\" />
     <Folder Include="Views\Empleados\" />
+    <Folder Include="Views\InventarioProductos\" />
+    <Folder Include="Views\Pedidos\" />
     <Folder Include="Views\Productos\" />
     <Folder Include="Views\Proveedores\" />
     <Folder Include="Views\Usuarios\" />
+    <Folder Include="Views\Ventas\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -680,8 +800,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\ReporteCategorias.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCliente.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteEmpleados.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteProductos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteProveedores.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteUsuarios.rdlc" />
   </ItemGroup>
   <PropertyGroup>

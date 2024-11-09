@@ -17,13 +17,32 @@ namespace SYSFARMACIASANJUAN.Pages
         {
             if (!IsPostBack) // Solo asigna la fecha la primera vez que se carga la página
             {
+                //Modal nuevo pedido
                 lblPedidoFechaCreacion.Text = DateTime.Now.ToString("yyyy-MM-dd"); // Formato de fecha
                 lblPedidoEstado.Text = "Pendiente";
-                ListarPuestosEmpleado();
+                inputBuscarProducto.ReadOnly = true;
+                tbMostrarPedidoID.ReadOnly = true;
+
+                //Modal ver pedido y detalle de pedido
+                lblVerPedidoFechaCreacion.Enabled = true;
+                lblVerPedidoEstado.Enabled = true;
+                //tbVerPedidoFechaEstimada.ReadOnly = true;
+                ddlVerPedidoProveedor.Enabled = true;
+                //btnVerGuardarCambios.Enabled = true;
+                //inputVerBuscarProducto.Enabled = true;
+                //tbVerPedidoObservacion.ReadOnly = true;
+                //tbVerMostrarPedidoID.ReadOnly=true;
+                //inputVerBuscarProducto.ReadOnly=true;
+
+                //if () { 
+                
+                //}
+
+                ListarProveedores();
             }
         }
 
-        private void ListarPuestosEmpleado()
+        private void ListarProveedores()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["MiConexionDB"].ConnectionString;
             string query = "SELECT PROVEEDOR_ID, PROVEEDOR_NOMBRE FROM PROVEEDOR";
@@ -46,10 +65,14 @@ namespace SYSFARMACIASANJUAN.Pages
                                 string proveedorId = reader["PROVEEDOR_ID"].ToString();
                                 string proveeedorNombre = reader["PROVEEDOR_NOMBRE"].ToString();
                                 ddlPedidoProveedor.Items.Add(new ListItem(proveeedorNombre, proveedorId));
+                                ddlBuscarPedidoProveedor.Items.Add(new ListItem(proveeedorNombre, proveedorId));
+                                ddlVerPedidoProveedor.Items.Add(new ListItem(proveeedorNombre, proveedorId));
                                 //ddlPuestoEmpleadoModificar.Items.Add(new ListItem(puestoNombre, puestoId));
                             }
 
                             ddlPedidoProveedor.Items.Insert(0, new ListItem("Seleccione", "0"));
+                            ddlBuscarPedidoProveedor.Items.Insert(0, new ListItem("Seleccione", "0"));
+                            ddlVerPedidoProveedor.Items.Insert(0, new ListItem("Seleccione", "0"));
                             //ddlPuestoEmpleadoModificar.Items.Insert(0, new ListItem("Seleccione", "0"));
                         }
 
