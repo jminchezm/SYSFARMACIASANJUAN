@@ -1,4 +1,5 @@
 ﻿using SYSFARMACIASANJUAN.DataAccess;
+using SYSFARMACIASANJUAN.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,18 @@ namespace SYSFARMACIASANJUAN.Bussines
     {
         private VentaDataAccess ventaDataAccess = new VentaDataAccess();
 
+        public List<Venta> ObtenerListarVentaPorFiltro(string ventaId = null, DateTime? fechaInicio = null, DateTime? fechaFin = null, string clienteId = null)
+        {
+            // Obtén la lista completa de productos que coinciden con el ID, nombre, fecha de creación y estado
+            var ventas = ventaDataAccess.ListarVentasPorFiltro(ventaId, fechaInicio, fechaFin, clienteId);
+
+            // Devuelve la lista de productos (puede estar vacía si no se encontraron coincidencias)
+            return ventas;
+        }
+
         public string MantenimientoVenta(
         ref string ventaId,
         DateTime? ventaFecha,
-        string ventaEstado,
         decimal ventaTotal,
         string venta_clienteId,
         string venta_usuarioId,
@@ -32,7 +41,6 @@ namespace SYSFARMACIASANJUAN.Bussines
             return ventaDataAccess.MantenimientoVenta(
                 ref ventaId,
                 ventaFecha,
-                ventaEstado,
                 ventaTotal,
                 venta_clienteId,
                 venta_usuarioId,
@@ -43,6 +51,16 @@ namespace SYSFARMACIASANJUAN.Bussines
         private bool IsValidAccion(string accion)
         {
             return accion == "1" || accion == "2" || accion == "3";
+        }
+
+        public string ModificarTotalVenta(Venta venta)
+        {
+            if (string.IsNullOrWhiteSpace(venta.ventaId))
+            {
+                throw new ArgumentException("El ID de la venta es obligatorio.");
+            }
+
+            return ventaDataAccess.ModificarTotalVenta(venta);
         }
 
     }

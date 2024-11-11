@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SYSFARMACIASANJUAN.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -12,10 +13,65 @@ namespace SYSFARMACIASANJUAN.DataAccess
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["MiConexionDB"].ConnectionString;
 
+        public List<Venta> ListarVentasPorFiltro(string ventaId = null, DateTime? fechaInicio = null, DateTime? fechaFin = null, string clienteId = null)
+        {
+            List<Venta> ventas = new List<Venta>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("SP_OBTENERVENTAS", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Agregar el parámetro del ID de la venta, validando si es null o vacío
+                    command.Parameters.AddWithValue("@VentaID", string.IsNullOrEmpty(ventaId) ? (object)DBNull.Value : ventaId);
+
+                    // Agregar los parámetros del rango de fechas
+                    command.Parameters.AddWithValue("@FechaInicio", fechaInicio.HasValue ? (object)fechaInicio.Value : DBNull.Value);
+                    command.Parameters.AddWithValue("@FechaFin", fechaFin.HasValue ? (object)fechaFin.Value : DBNull.Value);
+
+                    // Agregar el parámetro del ID del cliente, validando si es null o vacío
+                    command.Parameters.AddWithValue("@ClienteID", string.IsNullOrEmpty(clienteId) ? (object)DBNull.Value : clienteId);
+
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Venta venta = new Venta
+                                {
+                                    ventaId = reader["VENTA_ID"].ToString(),
+                                    ventaFecha = (DateTime) reader["VENTA_FECHA"],
+                                    ventaTotal = (decimal)reader["VENTA_TOTAL"],
+                                    venta_clienteId = reader["CLIENTE_ID"].ToString(),
+                                    venta_clienteNit = reader["CLIENTE_NIT"].ToString(),
+                                    venta_clienteCui = reader["CLIENTE_CUI"].ToString(),
+                                    venta_clienteNombre = reader["CLIENTE_NOMBRE_COMPLETO"].ToString(),
+                                    venta_usuarioId = reader["USUARIO_ID"].ToString(),
+                                    venta_usuarioNomre = reader["USUARIO_NOMBRE"].ToString()
+                                };
+
+                                ventas.Add(venta);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejar el error
+                        throw new Exception("Error al obtener la venta: " + ex.Message, ex);
+                    }
+                }
+            }
+
+            return ventas;
+        }
+
+
         public string MantenimientoVenta(
         ref string ventaId,
         DateTime? ventaFecha,
-        string ventaEstado,
         decimal ventaTotal,
         string venta_clienteId,
         string venta_usuarioId,
@@ -38,7 +94,6 @@ namespace SYSFARMACIASANJUAN.DataAccess
                     ventaIdParam.Value = string.IsNullOrEmpty(ventaId) ? (object)DBNull.Value : ventaId;
 
                     command.Parameters.AddWithValue("@VENTA_FECHA", ventaFecha);
-                    command.Parameters.AddWithValue("@VENTA_ESTADO", ventaEstado ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@VENTA_TOTAL", ventaTotal);
                     command.Parameters.AddWithValue("@CLIENTE_ID", venta_clienteId);
                     command.Parameters.AddWithValue("@USUARIO_ID", venta_usuarioId);
@@ -74,5 +129,31 @@ namespace SYSFARMACIASANJUAN.DataAccess
                 }
             }
         }
+
+        public string ModificarTotalVenta(Venta venta)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("SP_MODIFICAR_TOTAL_VENTA", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@VENTA_ID", venta.ventaId);
+                    command.Parameters.AddWithValue("@VENTA_TOTAL", venta.ventaTotal);
+
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        return "Venta actualizada exitosamente";
+                    }
+                    catch (SqlException ex)
+                    {
+                        throw new Exception("Error al modificar la venta: " + ex.Message);
+                    }
+                }
+            }
+        }
+
     }
 }

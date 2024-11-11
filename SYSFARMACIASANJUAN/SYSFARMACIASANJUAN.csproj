@@ -304,6 +304,7 @@
     <Content Include="Resources\img\cambioContraseñaUsuario.gif" />
     <Content Include="Resources\img\cerrar.png" />
     <Content Include="Resources\img\cliente_modificado.png" />
+    <Content Include="Resources\img\confirmacionVenta.gif" />
     <Content Include="Resources\img\confirmarPedido.png" />
     <Content Include="Resources\img\contrasenaIncorrecta.png" />
     <Content Include="Resources\img\crear_cliente.png" />
@@ -323,12 +324,14 @@
     <Content Include="Resources\img\ImgProductos\productoAgregado.gif" />
     <Content Include="Resources\img\ImgProductos\productoModificado.gif" />
     <Content Include="Resources\img\lisproveedor.png" />
+    <Content Include="Resources\img\lista.png" />
     <Content Include="Resources\img\listarcategoria.png" />
     <Content Include="Resources\img\listar_cliente.png" />
     <Content Include="Resources\img\lista_empleados.png" />
     <Content Include="Resources\img\lista_usuarios.png" />
     <Content Include="Resources\img\Login\iconoLogin.gif" />
     <Content Include="Resources\img\Login\usuario.png" />
+    <Content Include="Resources\img\ls.png" />
     <Content Include="Resources\img\medicamento.png" />
     <Content Include="Resources\img\modificar_usuario.png" />
     <Content Include="Resources\img\nuevo_usuario.png" />
@@ -380,6 +383,7 @@
     <Content Include="Resources\js\CRUDCategoria.js" />
     <Content Include="Resources\js\CRUDClientes.js" />
     <Content Include="Resources\js\CRUDEmpleados.js" />
+    <Content Include="Resources\js\CRUDEPais.js" />
     <Content Include="Resources\js\CRUDEProveedor.js" />
     <Content Include="Resources\js\CRUDPedidos.js" />
     <Content Include="Resources\js\CRUDProductos.js" />
@@ -544,6 +548,7 @@
     <Compile Include="Bussines\CategoriaServices.cs" />
     <Compile Include="Bussines\ClienteServices.cs" />
     <Compile Include="Bussines\DetallePedidoServices.cs" />
+    <Compile Include="Bussines\DetalleVentaServices.cs" />
     <Compile Include="Bussines\EmpleadoServices.cs" />
     <Compile Include="Bussines\InventarioProductoServices.cs" />
     <Compile Include="Bussines\PedidoServices.cs" />
@@ -567,6 +572,7 @@
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\DetalleProductosController.cs" />
+    <Compile Include="Controllers\DetalleVentasController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\InventarioProductosController.cs" />
     <Compile Include="Controllers\PedidosController.cs" />
@@ -578,6 +584,7 @@
     <Compile Include="DataAccess\CategoriaDataAccess.cs" />
     <Compile Include="DataAccess\ClienteDataAccess.cs" />
     <Compile Include="DataAccess\DetallePedidoDataAccess.cs" />
+    <Compile Include="DataAccess\DetalleVentaDataAccess.cs" />
     <Compile Include="DataAccess\EmpleadoDataAccess.cs" />
     <Compile Include="DataAccess\InventarioProductoDataAccess.cs" />
     <Compile Include="DataAccess\PedidoDataAccess.cs" />
@@ -624,6 +631,7 @@
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\DetallePedido.cs" />
+    <Compile Include="Models\DetalleVenta.cs" />
     <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\InventarioProducto.cs" />
     <Compile Include="Models\Pedido.cs" />
@@ -780,6 +788,7 @@
     <Folder Include="Data\" />
     <Folder Include="Uploads\" />
     <Folder Include="Views\DetalleProductos\" />
+    <Folder Include="Views\DetalleVentas\" />
     <Folder Include="Views\Empleados\" />
     <Folder Include="Views\InventarioProductos\" />
     <Folder Include="Views\Pedidos\" />

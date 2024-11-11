@@ -65,7 +65,7 @@ body, html {
 }
 
 .input-group {
-    width: 24%;
+    width: 23%;
     /*height: 7px;*/
     /*height: 100%;*/
     /*margin-bottom: 10px;*/
@@ -142,25 +142,25 @@ body, html {
     }
 }
 
-#modal-content-id, #modal-content-modalVerPedido {
+#modal-content-id, #modal-content-modalVerVenta {
     width: 95%;
     max-width: 100%;
     height: 98%;
     max-height: 100%;
 }
 
-#modal-content-modalDetallePedido {
+#modal-content-modalDetalleVenta {
     width: 100%;
     max-width: 40%;
     height: 100%;
-    max-height: 55%;
+    max-height: 75%;
 }
 
-#modal-content-modalModificarDetallePedido {
+#modal-content-modalModificarDetalleVentas {
     width: 100%;
     max-width: 40%;
     height: 100%;
-    max-height: 60%;
+    max-height: 75%;
 }
 
 /* Estilos para el modal */
@@ -180,7 +180,7 @@ body, html {
     display: flex;
 }
 
-#modalDetallePedido {
+#modalDetalleVenta {
     z-index: 2;
 }
 
@@ -283,12 +283,17 @@ body, html {
 
 /*Asignación de estilo para la tabla*/
 /* Estilos generales para la tabla */
-#areaDetallePedido, #areaVerDetallePedido {
+#areaDetalleVenta, #areaVerDetalleVenta {
     height: 100%;
     max-height: 68%; /* Ajusta la altura según tus necesidades */
     overflow-y: auto; /* Habilitar el scroll vertical */
     background-color: lightgray;
     margin-bottom: 5px;
+    /*margin-top: 20px;*/
+}
+
+#areaVerDetalleVenta {
+    max-height: 75%; /* Ajusta la altura según tus necesidades */
     /*margin-top: 20px;*/
 }
 
@@ -298,27 +303,27 @@ body, html {
     margin-top: 20px;
 }
 
-    #contenedor-tabla table, #areaDetallePedido table, #areaVerDetallePedido table {
+    #contenedor-tabla table, #areaDetalleVenta table, #areaVerDetalleVenta table {
         width: 100%;
         border-collapse: collapse;
         font-family: Arial, sans-serif;
         /*font-size:small;*/
     }
 
-    #contenedor-tabla th, #contenedor-tabla td, #areaDetallePedido th, #areaDetallePedido td, #areaVerDetallePedido th, #areaVerDetallePedido td {
+    #contenedor-tabla th, #contenedor-tabla td, #areaDetalleVenta th, #areaDetalleVenta td, #areaVerDetalleVenta th, #areaVerDetalleVenta td {
         border: 1px solid #ddd;
         padding: 10px;
         text-align: center;
     }
 
     /*Permite que los titulos de la tabla queden fijos*/
-    #contenedor-tabla thead th, #areaDetallePedido thead th, #areaVerDetallePedido thead th {
+    #contenedor-tabla thead th, #areaDetalleVenta thead th, #areaVerDetalleVenta thead th {
         position: sticky;
         top: 0;
         z-index: 1;
     }
 
-    #contenedor-tabla th, #areaDetallePedido th, #areaVerDetallePedido th {
+    #contenedor-tabla th, #areaDetalleVenta th, #areaVerDetalleVenta th {
         background-color: #048ABF;
         color: white;
         font-weight: bold;
@@ -326,12 +331,12 @@ body, html {
     }
 
     /* Estilo para las filas pares de la tabla */
-    #contenedor-tabla tr:nth-child(even), #areaDetallePedido tr:nth-child(even), #areaVerDetallePedido tr:nth-child(even) {
+    #contenedor-tabla tr:nth-child(even), #areaDetalleVenta tr:nth-child(even), #areaVerDetalleVenta tr:nth-child(even) {
         background-color: #f2f2f2;
     }
 
     /* Estilo para las filas al pasar el cursor */
-    #contenedor-tabla tr:hover, #areaDetallePedido tr:hover, #areaVerDetallePedido tr:hover {
+    #contenedor-tabla tr:hover, #areaDetalleVenta tr:hover, #areaVerDetalleVenta tr:hover {
         background-color: #ddd;
     }
 
@@ -351,25 +356,25 @@ button.modificarBtn, button.eliminarBtn {
 
 /* Estilos para la tabla responsiva */
 @media screen and (max-width: 768px) {
-    #contenedor-tabla table, #contenedor-tabla th, #contenedor-tabla td, #areaDetallePedido table, #areaDetallePedido th, #areaDetallePedido td, #areaVerDetallePedido table, #areaVerDetallePedido th, #areaVerDetallePedido td {
+    #contenedor-tabla table, #contenedor-tabla th, #contenedor-tabla td, #areaDetalleVenta table, #areaDetalleVenta th, #areaDetalleVenta td, #areaVerDetalleVenta table, #areaVerDetalleVenta th, #areaVerDetalleVenta td {
         display: block;
         width: 100%;
     }
 
-    #contenedor-tabla th, #areaDetallePedido th, #areaVerDetallePedido th {
+    #contenedor-tabla th, #areaDetalleVenta th, #areaVerDetalleVenta th {
         text-align: right;
         padding-right: 20px;
         background-color: #333;
         color: white;
     }
 
-    #contenedor-tabla td, #areaDetallePedido td, #areaVerDetallePedido td {
+    #contenedor-tabla td, #areaDetalleVenta td, #areaVerDetalleVenta td {
         text-align: right;
         padding-left: 50%;
         position: relative;
     }
 
-        #contenedor-tabla td::before, #areaDetallePedido td::before, #areaVerDetallePedido td::before {
+        #contenedor-tabla td::before, #areaDetalleVenta td::before, #areaVerDetalleVenta td::before {
             content: attr(data-label);
             position: absolute;
             left: 0;
@@ -380,7 +385,7 @@ button.modificarBtn, button.eliminarBtn {
         }
 }
 
-#areaAccionDetallePedido {
+#areaAccionDetalleVenta {
     display: flex;
     height: 100px;
     /*flex-direction: column;*/
@@ -392,7 +397,7 @@ button.modificarBtn, button.eliminarBtn {
     height: 65%;
 }*/
 
-#btnEliminarDetallePedido {
+#btnEliminarDetalleVenta {
     margin-left: 10px;
 }
 
@@ -479,19 +484,20 @@ button.modificarBtn, button.eliminarBtn {
 }
 
 /*----Area del pedido del producto----*/
-#containerVenta, #containerVerPedido {
+#containerVenta, #containerVerVenta {
     height: 100%;
     max-height: 88%;
     /*background-color:red;*/
 }
 /*Area de campos para crear pedido*/
-#camposVenta, #camposVenta2 {
+#camposVenta, #camposVenta2, #camposVerVenta, #camposVerVenta2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 9%;
+    /*background-color: aqua;*/
     /*max-height: 7%;*/
     /*margin-bottom: 0.2%;*/
     /*padding-left: 10px;
@@ -499,7 +505,7 @@ button.modificarBtn, button.eliminarBtn {
     /* background-color: red;*/
 }
 
-#containerVerPedidoObservacion {
+#containerVerVentaObservacion {
     display: flex;
     /*justify-content:center;*/
     /*align-items:center;*/
@@ -530,31 +536,32 @@ button.modificarBtn, button.eliminarBtn {
     margin-left: 5px;
 }
 
-#buscadorVenta, #buscadorVerProductoPedido {
+#buscadorVenta, #buscadorVerProductoVenta, #buscadorVerVenta {
     display: flex;
     height: 9%;
     position: relative;
     justify-content: center;
     align-items: center;
     width: 100%;
+    /*background-color: red;*/
     /*margin-left: 0.8%;
     margin-right: 0.8%;*/
     /*background-color: aquamarine;*/
 }
 
-#lblMostrarVentaId {
+#lblMostrarVentaId, #lblVerMostrarVentaID {
     width: 100%;
     max-width: 20%;
 }
 
-#inputBuscarProducto, #inputVerBuscarProducto {
+#inputBuscarProducto, #inputVerBuscarVenta {
     /*width: 100%;*/
     max-width: 70%;
 }
 
-#tbbuscadorProductoPedido, #tbbuscadorVerProductoPedido {
+#tbbuscadorProductoPedido, #tbbuscadorVerProductoVenta, #tbbuscadorProductoVenta {
     width: 100%;
-    background-color: red;
+    /*background-color: red;*/
 }
 
 
@@ -593,7 +600,7 @@ button.modificarBtn, button.eliminarBtn {
 }
 
 /*Modal detalle pedido*/
-#fotoDetallePedidoProducto {
+#fotoDetalleVentaProducto {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -601,11 +608,11 @@ button.modificarBtn, button.eliminarBtn {
     /*background-color:antiquewhite;*/
 }
 
-#detallePedidoIdsImg {
+#detalleVentasIdsImg {
     display: felx;
 }
 
-#detallePedidoIdProductoId {
+#detallePedidoIdVentaId {
     width: 50%;
 }
 

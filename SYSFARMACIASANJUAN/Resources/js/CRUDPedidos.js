@@ -1744,7 +1744,7 @@ function confirmacionPedido(event) {
     if (proveedor == null) {
         customAlert("Debes de asignar a un proveedor", "../Resources/img/advertenciaCamposObligatorios.gif");
     } else {
-        alert(proveedor);
+        /*alert(proveedor);*/
         (async () => {
             const resultado = await verificarPrecioUnitarioDetallePedido($('#lblVerMostrarPedidoID').text());
             if (resultado) {

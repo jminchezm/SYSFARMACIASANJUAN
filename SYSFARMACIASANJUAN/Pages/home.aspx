@@ -48,13 +48,13 @@
                     <!--sub menu-->
                     <a href="#" class ="submenu-toggle"><i class="fas fa-cash-register"></i> Ventas</a>
                     <ul class ="submenu">
-                        <li><a href="#"> <i class ="fas fa-boxes"></i>Productos</a></li>
+                        <%--<li><a href="#"> <i class ="fas fa-boxes"></i>Productos</a></li>--%>
                         <li><a href="#" onclick="loadContent('ModuloCliente.aspx')"> <i class ="fas fa-users"></i>Clientes</a></li>
                         <li><a href="#" onclick="loadContent('ModuloVentasVenta.aspx')"> <i class ="fas fa-cash-register"></i>Ventas</a></li>
-                        <li><a href="#"> <i class ="fas fa-file-invoice-dollar"></i>Facturacion</a></li>
-                        <li><a href="#"> <i class ="fas fa-file-alt"></i>Reportes</a></li>
-                        <li> <a href="#"> <i class="fas fa-chart-line"></i>Historial de Ventas </a></li>
-                        <li> <a href="#"> <i class ="fas fa-cash-register"> </i>Caja</a></li>
+                        <%--<li><a href="#"> <i class ="fas fa-file-invoice-dollar"></i>Facturacion</a></li>--%>
+                        <%--<li><a href="#"> <i class ="fas fa-file-alt"></i>Reportes</a></li>--%>
+                        <%--<li> <a href="#"> <i class="fas fa-chart-line"></i>Historial de Ventas </a></li>--%>
+                        <%--<li> <a href="#"> <i class ="fas fa-cash-register"> </i>Caja</a></li>--%>
                     </ul>
                 </li>
 
@@ -66,7 +66,7 @@
                         <%--<li> <a href="#"> <i class ="fas fa-shopping-cart"></i>Compras</a></li>--%>
                         <li> <a href="#" onclick="loadContent('ModuloCategoria.aspx')"> <i class ="fas fa-tags"></i>Categoría Producto</a></li>
                         <li> <a href="#" onclick="loadContent('ModuloProveedor.aspx')"> <i class ="fas fa-truck"></i>Proveedor</a></li>
-                        <li> <a href="#"> <i class ="fas fa-warehouse"></i>Kardex</a></li>
+                        <%--<li> <a href="#"> <i class ="fas fa-warehouse"></i>Kardex</a></li>--%>
 
                     </ul>
 
@@ -76,12 +76,15 @@
                     <a href="#" class="submenu-toggle"><i class="fas fa-cog"></i> Configuración</a>
                     <ul class="submenu">
                         <li><a href="#" onclick="loadContent('ModuloEmpleado.aspx')"><i class="fas fa-user-tie"></i> Empleados</a></li>
-                        <li><a href="#" onclick="loadContent('ModuloUsuarios.aspx')"><i class="fas fa-user"></i> Usuario</a></li>                        
+                        <li><a href="#" onclick="loadContent('ModuloUsuarios.aspx')"><i class="fas fa-user"></i> Usuario</a></li>
+                        <%--<li><a href="#" onclick="loadContent('Modulo_Pais.aspx')""><i class="fas fa-globe"></i>Pais</a></li>
+                        <li><a href="#" onclick="#"><i class="fas fa-building"></i>Departamento</a></li>
+                        <li><a href="#" onclick="#"><i class="fas fa-map-marker-alt"></i>Municipio</a></li>--%>
                         <%--<li><a href="#"><i class="fas fa-book"></i> Bitácora</a></li> --%>                   
                     </ul>
                 </li>
 
-                <li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>
+                <%--<li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>--%>
             </ul>
             </div>
 

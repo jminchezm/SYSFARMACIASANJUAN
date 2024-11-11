@@ -12,6 +12,8 @@ namespace SYSFARMACIASANJUAN.Models
         public string ventaEstado {  get; set; }
         public decimal ventaTotal {  get; set; }
         public string venta_clienteId {  get; set; }
+        public string venta_clienteNit { get; set; }
+        public string venta_clienteCui { get; set; }
         public string venta_usuarioId {  get; set; }
         public string venta_clienteNombre { get; set; }
         public string venta_usuarioNomre { get; set; }
